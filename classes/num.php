@@ -37,6 +37,14 @@ namespace Google;
 //class Num extends \Fuel\Core\Num {
 class Num {
 	
+	/**
+	 * Convert one currency value to another
+	 *
+	 * @param   integer    The amount of currency to convert, such as 5.25
+	 * @param   string     The currencies current type, defaults to USD
+	 * @param   string     The type of currency to convert to, defaults to EUR
+	 * @return  string     The converted currency
+	 */
 	public static function convert_currency($amount = 1, $from = 'USD', $to = 'EUR')
 	{
 		$amount = urlencode($amount);
