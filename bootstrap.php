@@ -25,6 +25,7 @@ Autoloader::add_core_namespace('Google');
 
 // Define available classes into the Autoloader
 Autoloader::add_classes(array(
+	'Google\\Analytics'				=> __DIR__.'/classes/analytics.php',
 	'Google\\Num'					=> __DIR__.'/classes/num.php',
 	'Google\\Recaptcha'				=> __DIR__.'/classes/recaptcha.php',
 	'Google\\Recaptcha\\Response'	=> __DIR__.'/classes/recaptcha/response.php',
