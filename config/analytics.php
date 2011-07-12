@@ -26,7 +26,7 @@ return array(
 	 * @var   string
 	 */
 	'password'	       => '',
-	
+
 	/**
 	 * Default Website Profile ID (Usually referred to as a UA code)
 	 * 

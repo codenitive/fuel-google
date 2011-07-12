@@ -48,7 +48,18 @@ namespace Google;
  * @category classes
  */
 class Recaptcha {
-	
+
+	/**
+	 * Class initialization callback
+	 *
+	 * @return  void
+	 */
+	public static function _init()
+	{
+		\Config::load('recaptcha', true);
+		\Config::load('mailhide', true);
+	}
+
 	/**
 	 * Encodes the given data into a query string format
 	 * 

@@ -21,7 +21,7 @@ return array(
 	 * @var   string
 	 */
 	'public_key'	=> '',
-	
+
 	/**
 	 * Private Key
 	 * 

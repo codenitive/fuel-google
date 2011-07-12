@@ -21,7 +21,7 @@ return array(
 	 * @var   string
 	 */
 	'public_key'	=> '',
-	
+
 	/**
 	 * Private Key
 	 * 
@@ -31,7 +31,7 @@ return array(
 	 * @var   string
 	 */
 	'private_key'	=> '',
-	
+
 	/**
 	 * The reCAPTCHA server URL's
 	 */

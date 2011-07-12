@@ -15,7 +15,7 @@
  * FuelPHP Google package implementation. This namespace controls all Google
  * package functionality, including multiple sub-namespaces for the various
  * tools.
- * 
+ *
  * @author     Chase "Syntaqx" Hutchins
  * @version    1.0
  * @package    Fuel
@@ -25,11 +25,11 @@ namespace Google;
 
 /**
  * Google Analytics API & Tracking class
- * 
+ *
  * This class is meant to provide not only the ability to dynamically inject
  * analytic tracking codes, but retrieve data from your Google Analytics account
  * to be utilized within your application.
- * 
+ *
  * Note: This class is a really rough first draft, and although functional,
  * may need some love and recommendations for all of you potential forkers out
  * there. If you find something that's helpful, don't forget to make a pull

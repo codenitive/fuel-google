@@ -15,7 +15,7 @@
  * FuelPHP Google package implementation. This namespace controls all Google
  * package functionality, including multiple sub-namespaces for the various
  * tools.
- * 
+ *
  * @author     Chase "Syntaqx" Hutchins
  * @version    1.0
  * @package    Fuel
@@ -27,7 +27,7 @@ namespace Google;
  * Google API extension to the Number helpers class, allows for additional
  * formatting through Google's database that otherwise would be unmaintainable
  * for your average user.
- * 
+ *
  * @author   Chase "Syntaqx" Hutchins
  * @version  1.0
  * @package  Fuel
