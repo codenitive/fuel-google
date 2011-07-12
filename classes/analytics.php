@@ -69,11 +69,9 @@ class Analytics {
 	 *
 	 * @return  self
 	 */
-	public static function factory($config = array())
+	public static function factory(array $config = array())
 	{
-		\Config::load('analytics', true);
-
-		static::$configuration = array_merge(\Config::get('analytics'), $config);
+		static::$configuration = array_merge(\Config::get('analytics', true), $config);
 
 		$instance = new static(static::$configuration['email'], static::$configuration['password']);
 
