@@ -45,7 +45,7 @@ class Analytics {
 
 	/**
 	 * Cached instance of the configuration file
-	 * 
+	 *
 	 * @var   array
 	 */
 	protected static $configuration = array();
@@ -55,18 +55,18 @@ class Analytics {
 	protected $password;
 	protected $auth_code;
 	protected $profile_id;
-	
+
 	// Date ranges to extract analytical data from
 	protected $date_end;
 	protected $date_start;
-	
+
 	/**
 	 * Factory method
-	 * 
+	 *
 	 * This method allows for auto population of some of your analytic settings
 	 * based on your current base_url. This also attempts to remove additional
 	 * steps from your process by setting the various values for data extraction
-	 * 
+	 *
 	 * @return  self
 	 */
 	public static function factory()
@@ -184,7 +184,7 @@ class Analytics {
 	
 	/**
 	 * Sets a Profile ID
-	 * 
+	 *
 	 * @param   string     Profile ID string (format: 'ga:1234')
 	 * @return  boolean
 	 */
@@ -202,7 +202,7 @@ class Analytics {
 
 	/**
 	 * Set the date range
-	 * 
+	 *
 	 * @param   string     Starting date, in the format of YYYY-MM-DD
 	 * @param   string     Ending date, in the format of YYYY-MM-DD
 	 */
@@ -234,7 +234,7 @@ class Analytics {
 	 * Retrieve the report according the the properties set. For detailed
 	 * instructions regarding the Google API properties, as well as the
 	 * meaning of the returned values, reference below:
-	 * 
+	 *
 	 * @link	http://code.google.com/apis/analytics/docs/gdata/gdataReferenceDataFeed.html
 	 * @param   array
 	 * @return  array
@@ -303,7 +303,7 @@ class Analytics {
 
 	/**
 	 * Retrieve the list of Website Profiles according to your Analytics account
-	 * 
+	 *
 	 * @return  array
 	 */
 	public function get_website_profiles()
@@ -361,7 +361,7 @@ class Analytics {
 	
 	/**
 	 * Make an API call to whichever $url
-	 * 
+	 *
 	 * @param   string
 	 * @see     post_to
 	 */
@@ -373,7 +373,7 @@ class Analytics {
 	/**
 	 * Authenticate an analytics email and password with Google, and set the
 	 * $auth_code returned by Google for later use.
-	 * 
+	 *
 	 * @return  void
 	 */
 	protected function authenticate()
@@ -405,7 +405,7 @@ class Analytics {
 
 	/**
 	 * Performs a curl call to the specified $url
-	 * 
+	 *
 	 * @param   string
 	 * @param   array     Specify the data to be 'POST'ed
 	 * @param   array     Specify any additional headers

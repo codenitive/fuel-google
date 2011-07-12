@@ -15,7 +15,7 @@
  * FuelPHP Google package implementation. This namespace controls all Google
  * package functionality, including multiple sub-namespaces for the various
  * tools.
- * 
+ *
  * @author     Chase "Syntaqx" Hutchins
  * @version    1.0
  * @package    Fuel
@@ -25,9 +25,9 @@ namespace Google;
 
 /**
  * Google Dym (Did You Mean)
- * 
+ *
  * This class provides spell-checking via Google's "Did You Mean?" API service.
- * 
+ *
  * @author   Chase "Syntaqx" Hutchins
  * @version  1.0
  * @package  Fuel
@@ -38,16 +38,16 @@ class Dym {
 
 	/**
 	 * To change the language, switch the tld.
-	 * 
+	 *
 	 * Example: "es" would return spanish translations.
-	 * 
+	 *
 	 * @var   string
 	 */
 	public static $tld = "com"; // Default is COM, if you want to look for example Spanish suggestion, use "es"  
 
 	/**
 	 * Request a translation
-	 * 
+	 *
 	 * @param   string     The string to translate
 	 * @return  string     The potential translation of the string
 	 */
@@ -68,7 +68,7 @@ class Dym {
 
 	/**
 	 * Curl fetching from the Google server
-	 * 
+	 *
 	 * @param   string     The URL to request
 	 * @param   array      Additional headers, if desired
 	 * @return  string     The returned data

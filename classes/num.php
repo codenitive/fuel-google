@@ -34,9 +34,8 @@ namespace Google;
  * @package  Google
  * @category classes
  */
-//class Num extends \Fuel\Core\Num {
 class Num {
-	
+
 	/**
 	 * Convert one currency value to another
 	 *
@@ -50,20 +49,20 @@ class Num {
 		$amount = urlencode($amount);
 		$from = urlencode($from);
 		$to = urlencode($to);
-		
+
 		$curl = curl_init();
-		
+
 		curl_setopt($curl, CURLOPT_URL, 'http://www.google.com/ig/calculator?hl=en&q='.$amount.$from.'=?'.$to);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)');
 		curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 0);
-		
+
 		$raw = curl_exec($curl);
 		curl_close($curl);
-		
+
 		$data = explode('"', $raw);
 		$data = explode(' ', $data[3]);
-		
+
 		return($data[0]);
 	}
 }
