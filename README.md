@@ -5,6 +5,7 @@ The Google Package for FuelPHP aims to provide functionality for common (if not 
 ## Development Team
 
 * Chase "Syntaqx" Hutchins - Lead Developer ([http://syntaqx.com] (http://syntaqx.com))
+* Frank Bardon Jr. - Developer ([http://nerdsrescue.me] (http://nerdsrescue.me)
 
 ## Usage
 
