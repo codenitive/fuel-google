@@ -26,10 +26,9 @@ namespace Google;
 /**
  * PageRank Class
  *
- *
  * @author   Chase "Syntaqx" Hutchins
  * @author   David Landes
- * @author   David Walsh
+ * @author   David Wals
  * @version  1.0
  * @package  Fuel
  * @package  Google
