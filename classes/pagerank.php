@@ -44,7 +44,7 @@ class Pagerank {
 	 * @param    unknown
 	 * @return   integer
 	 */
-	public static function string_to_number($string, $check, $magic)
+	protected static function string_to_number($string, $check, $magic)
 	{
 		$int32  = 4294967296;  // 2^32
 		$length = strlen($string);
@@ -74,7 +74,7 @@ class Pagerank {
 	 * @param    string
 	 * @return   string
 	 */
-	public static function create_hash($string)
+	protected static function create_hash($string)
 	{
 		$check1 = static::string_to_number($string, 0x1505, 0x21);
 		$check2 = static::string_to_number($string, 0, 0x1003F);
@@ -99,7 +99,7 @@ class Pagerank {
 	 * @param     string
 	 * @return    string
 	 */
-	public static function check_hash($hashNumber)
+	protected static function check_hash($hashNumber)
 	{
 		$check = 0;
 		$flag  = 0;
@@ -140,6 +140,12 @@ class Pagerank {
 		return '7'.$check.$hashString;
 	}
 
+	/**
+	 * Check the pagerank of a url
+	 *
+	 * @param    string
+	 * @return   integer
+	 */
 	public static function check($page)
 	{
 		// Open a socket to the toolbarqueries address, used by Google Toolbar
