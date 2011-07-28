@@ -28,7 +28,7 @@ namespace Google;
  *
  * @author   Chase "Syntaqx" Hutchins
  * @author   David Landes
- * @author   David Wals
+ * @author   David Walsh
  * @version  1.0
  * @package  Fuel
  * @package  Google
