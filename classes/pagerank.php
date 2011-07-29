@@ -37,21 +37,22 @@ namespace Google;
 class Pagerank {
 
 	/**
-	 * Convert a string to a number
+	 * Convert string to a number
 	 *
 	 * @param    string
-	 * @param    unknown
-	 * @param    unknown
+	 * @param    string
+	 * @param    string
 	 * @return   integer
 	 */
-	protected static function string_to_number($string, $check, $magic)
+	protected static function string_to_number($string,$check,$magic)
 	{
-		$int32  = 4294967296;  // 2^32
+		$int32 = 4294967296;  // 2^32
 		$length = strlen($string);
 
 		for ($i = 0; $i < $length; $i++)
 		{
-			$check *= $magic;   
+			$check *= $magic;  
+
 			// If the float is beyond the boundaries of integer (usually +/- 2.15e+9 = 2^31), 
 			// the result of converting to integer is undefined
 			// refer to http://www.php.net/manual/en/language.types.integer.php
@@ -69,7 +70,7 @@ class Pagerank {
 	}
 
 	/**
-	 * Create a URL Hash
+	 * Create a url hash
 	 *
 	 * @param    string
 	 * @return   string
@@ -96,18 +97,18 @@ class Pagerank {
 	/**
 	 * Create checksum for hash
 	 *
-	 * @param     string
-	 * @return    string
+	 * @param    string
+	 * @return   string
 	 */
 	protected static function check_hash($hashNumber)
 	{
 		$check = 0;
-		$flag  = 0;
+		$flag = 0;
 
 		$hashString = sprintf('%u', $hashNumber) ;
 		$length = strlen($hashString);
 
-		for ($i = $length - 1;  $i >= 0;  $i --)
+		for($i = $length - 1;  $i >= 0;  $i --)
 		{
 			$r = $hashString{$i};
 
@@ -126,6 +127,7 @@ class Pagerank {
 		if(0 !== $check)
 		{
 			$check = 10 - $check;
+
 			if(1 === ($flag % 2) )
 			{
 				if(1 === ($check % 2))
@@ -141,7 +143,7 @@ class Pagerank {
 	}
 
 	/**
-	 * Check the pagerank of a url
+	 * Check the page rank of a given url
 	 *
 	 * @param    string
 	 * @return   integer
@@ -149,16 +151,16 @@ class Pagerank {
 	public static function check($page)
 	{
 		// Open a socket to the toolbarqueries address, used by Google Toolbar
-		$socket = fsockopen('toolbarqueries.google.com', 80, $errno, $errstr, 30);
+		$socket = fsockopen("toolbarqueries.google.com", 80, $errno, $errstr, 30);
 
 		// If a connection can be established
 		if($socket)
 		{
 			// Prep socket headers
-			$out  = 'GET /search?client=navclient-auto&ch='.static::check_hash(static::create_hash($page)).'&features=Rank&q=info:'.$page.'&num=100&filter=0 HTTP/1.1\r\n';
-			$out .= 'Host: toolbarqueries.google.com\r\n';
-			$out .= 'User-Agent: Mozilla/4.0 (compatible; GoogleToolbar 2.0.114-big; Windows XP 5.1)\r\n';
-			$out .= 'Connection: Close\r\n\r\n';
+			$out = "GET /search?client=navclient-auto&ch=".static::check_hash(static::create_hash($page))."&features=Rank&q=info:".$page."&num=100&filter=0 HTTP/1.1\r\n";
+			$out .= "Host: toolbarqueries.google.com\r\n";
+			$out .= "User-Agent: Mozilla/4.0 (compatible; GoogleToolbar 2.0.114-big; Windows XP 5.1)\r\n";
+			$out .= "Connection: Close\r\n\r\n";
 
 			// Write settings to the socket
 			fwrite($socket, $out);
@@ -182,7 +184,7 @@ class Pagerank {
 			fclose($socket);
 
 			// Return the rank!
-			return $result;
+			return (int) $result;
 		}
 	}
 }
