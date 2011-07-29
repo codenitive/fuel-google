@@ -44,7 +44,7 @@ class Pagerank {
 	 * @param    string
 	 * @return   integer
 	 */
-	protected static function string_to_number($string,$check,$magic)
+	protected static function string_to_number($string, $check, $magic)
 	{
 		$int32 = 4294967296;  // 2^32
 		$length = strlen($string);
