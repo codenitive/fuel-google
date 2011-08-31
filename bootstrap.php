@@ -32,6 +32,17 @@ Autoloader::add_classes(array(
 	'Google\\Recaptcha'             => __DIR__.'/classes/recaptcha.php',
 	'Google\\Recaptcha\\Response'   => __DIR__.'/classes/recaptcha/response.php',
 	'Google\\Serp'                  => __DIR__.'/classes/serp.php',
+
+    'Google\\Chart'                 => __DIR__.'/classes/chart.php',
+    'Google\\Chart_Driver'          => __DIR__.'/classes/chart/driver.php',
+    'Google\\Chart_Area'            => __DIR__.'/classes/chart/area.php',
+    'Google\\Chart_Bar'             => __DIR__.'/classes/chart/bar.php',
+    'Google\\Chart_GeoMap'          => __DIR__.'/classes/chart/geomap.php',
+    'Google\\Chart_Line'            => __DIR__.'/classes/chart/line.php',
+    'Google\\Chart_Pie'             => __DIR__.'/classes/chart/pie.php',
+    'Google\\Chart_Scatter'         => __DIR__.'/classes/chart/scatter.php',
+    'Google\\Chart_Table'           => __DIR__.'/classes/chart/table.php',
+    'Google\\Chart_Timeline'        => __DIR__.'/classes/chart/timeline.php',
 ));
 
 /* End of file bootstrap.php */
