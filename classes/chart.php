@@ -53,7 +53,7 @@ class Chart {
      */
     public static function forge($name = null) 
     {
-        if (\is_null($name))
+        if (is_null($name))
         {
             $name = 'default';
         }
@@ -88,7 +88,7 @@ class Chart {
      */
     public static function factory($name = null)
     {
-        return static::forge();
+        return static::forge($name);
     }
 
     /**
